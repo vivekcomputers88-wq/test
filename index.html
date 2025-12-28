@@ -1,23 +1,162 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Spoon-Knife</title>
-  <LINK href="styles.css" rel="stylesheet" type="text/css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vivek Computers Enquiry Form</title>
+<style>
+    * {box-sizing: border-box;}
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f4f4f4;
+        color: #333;
+    }
+    .container {
+        max-width: 700px;
+        margin: 40px auto;
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #0077cc;
+    }
+    label {
+        display: block;
+        margin: 14px 0 6px;
+        font-weight: bold;
+    }
+    input[type="text"],
+    input[type="tel"],
+    input[type="date"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #bbb;
+        border-radius: 6px;
+        font-size: 16px;
+    }
+    select { cursor: pointer; }
+    .radio-group,
+    .radio-group label { display: inline-block; margin-right: 15px; }
+    .radio-group input { margin-right: 6px; }
+    button {
+        width: 100%;
+        padding: 14px;
+        margin-top: 24px;
+        background: #0077cc;
+        color: white;
+        font-size: 18px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    button:hover { background: #005fa3; }
+    .small-text { font-size: 0.9em; color: #666; margin-top: 4px; }
+</style>
 </head>
-
 <body>
 
-<img src="forkit.gif" id="octocat" alt="" />
+<div class="container">
+    <h1>Vivek Computers Enquiry Form</h1>
+    <form id="enquiryForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScmHMf1XLKVcpoS5boT2UK9yjjXSCOafImZKSvVLa5s1NMh5w/formResponse" method="POST" target="_blank">
 
-<!-- Feel free to change this text here -->
-<p>
-  Fork me? Fork you, @octocat!
-</p>
-<p>
-  Sean made a change
-</p>
+        <!-- Branch question -->
+        <label>Branch Enquiry Name *</label>
+        <select name="entry.603305143" required>
+            <option value="" disabled selected>Select branch...</option>
+            <option>Ekta Nagar, Basmat Road, Parbhani</option>
+            <option>Ramkrushna Nagar, Talati Office Behind Basmat Road, Parbhani</option>
+        </select>
+
+        <!-- Candidate Name -->
+        <label>Candidate Name *</label>
+        <input type="text" name="entry.99099165" placeholder="Enter your name" required>
+
+        <!-- Gender -->
+        <label>Gender</label>
+        <div class="radio-group">
+            <label><input type="radio" name="entry.1235386003" value="Male"> Male</label>
+            <label><input type="radio" name="entry.1235386003" value="Female"> Female</label>
+        </div>
+
+        <!-- Qualification -->
+        <label>Qualification *</label>
+        <div class="radio-group">
+            <label><input type="radio" name="entry.1039631932" value="School"> School</label>
+            <label><input type="radio" name="entry.1039631932" value="College"> College</label>
+            <label><input type="radio" name="entry.1039631932" value="Other"> Other</label>
+        </div>
+
+        <!-- WhatsApp Mobile No -->
+        <label>WhatsApp Mobile No *</label>
+        <input type="tel" name="entry.1882843011" placeholder="Enter WhatsApp number" required>
+
+        <!-- Date of Enquiry -->
+        <label>Date of Enquiry *</label>
+        <input type="date" id="enquiryDate" required>
+
+        <!-- Select Course -->
+       <label>Select Course *</label>
+<div class="checkbox-group">
+    <label><input type="checkbox" name="entry.473673265" value="MS-CIT"> MS-CIT</label>
+    <label><input type="checkbox" name="entry.473673265" value="Tally Prime With GST"> Tally Prime With GST</label>
+    <label><input type="checkbox" name="entry.473673265" value="Artificial intelligence (AI)"> Artificial intelligence (AI)</label>
+    <label><input type="checkbox" name="entry.473673265" value="Advance Excel"> Advance Excel</label>
+    <label><input type="checkbox" name="entry.473673265" value="Other"> Other</label>
+</div>
+
+        <!-- Batch Time -->
+        <label>Batch Time *</label>
+        <div class="radio-group">
+            <label><input type="radio" name="entry.979434290" value="Morning"> Morning</label>
+            <label><input type="radio" name="entry.979434290" value="Afternoon"> Afternoon</label>
+            <label><input type="radio" name="entry.979434290" value="Evening"> Evening</label>
+            <label><input type="radio" name="entry.979434290" value="Night"> Night</label>
+        </div>
+
+        <!-- Source of Enquiry -->
+        <label>Source of Enquiry *</label>
+        <select name="entry.1595207663" required>
+            <option value="" disabled selected>Select source...</option>
+            <option>Friends</option>
+            <option>Teacher</option>
+            <option>Social media</option>
+            <option>Other</option>
+        </select>
+
+        <!-- Remark -->
+        <label>Remark *</label>
+        <textarea name="entry.1303418978" rows="4" placeholder="Your remarks or feedback"></textarea>
+        
+        <button type="submit">Submit</button>
+        <div class="small-text">* Required fields</div>
+    </form>
+</div>
+
+<script>
+document.getElementById("enquiryForm").addEventListener("submit", function(e) {
+    // Handle Google Form's separate year/month/day fields
+    const dateInput = document.getElementById("enquiryDate").value;
+    if (dateInput) {
+        const [year, month, day] = dateInput.split("-");
+        // Create hidden inputs for Google Form
+        const form = e.target;
+        form.querySelectorAll("input[name^='entry.1244397173_']").forEach(i => i.remove());
+        form.insertAdjacentHTML("beforeend",
+            `<input type="hidden" name="entry.1244397173_year" value="${year}">
+             <input type="hidden" name="entry.1244397173_month" value="${month}">
+             <input type="hidden" name="entry.1244397173_day" value="${day}">`
+        );
+    }
+});
+</script>
 
 </body>
 </html>
