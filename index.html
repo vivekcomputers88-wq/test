@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vivek Computers Enquiry Form</title>
 <style>
+	
     * {box-sizing: border-box;}
     body {
         font-family: 'Arial', sans-serif;
@@ -65,96 +66,144 @@
 
 <div class="container">
     <h1>Vivek Computers Enquiry Form</h1>
-    <form id="enquiryForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScmHMf1XLKVcpoS5boT2UK9yjjXSCOafImZKSvVLa5s1NMh5w/formResponse" method="POST" target="_blank">
 
-        <!-- Branch question -->
-        <label>Branch Enquiry Name *</label>
-        <select name="entry.603305143" required>
-            <option value="" disabled selected>Select branch...</option>
-            <option>Ekta Nagar, Basmat Road, Parbhani</option>
-            <option>Ramkrushna Nagar, Talati Office Behind Basmat Road, Parbhani</option>
-        </select>
-
-        <!-- Candidate Name -->
-        <label>Candidate Name *</label>
-        <input type="text" name="entry.99099165" placeholder="Enter your name" required>
-
-        <!-- Gender -->
-        <label>Gender</label>
-        <div class="radio-group">
-            <label><input type="radio" name="entry.1235386003" value="Male"> Male</label>
-            <label><input type="radio" name="entry.1235386003" value="Female"> Female</label>
-        </div>
-
-        <!-- Qualification -->
-        <label>Qualification *</label>
-        <div class="radio-group">
-            <label><input type="radio" name="entry.1039631932" value="School"> School</label>
-            <label><input type="radio" name="entry.1039631932" value="College"> College</label>
-            <label><input type="radio" name="entry.1039631932" value="Other"> Other</label>
-        </div>
-
-        <!-- WhatsApp Mobile No -->
-        <label>WhatsApp Mobile No *</label>
-        <input type="tel" name="entry.1882843011" placeholder="Enter WhatsApp number" required>
+    <form id="enquiryForm"
+    action="https://docs.google.com/forms/d/e/1FAIpQLSfuhvY8Pg_twGKyxaC_tqiR-waGkKwgwBXFjUuSCRKVR4yhUQ/formResponse?usp=pp_url"
+    method="POST" target="_blank">
 
         <!-- Date of Enquiry -->
         <label>Date of Enquiry *</label>
-        <input type="date" id="enquiryDate" required>
+        <input type="date" id="enquiryDate" name="entry.1710040844" required readonly>
 
-        <!-- Select Course -->
-       <label>Select Course *</label>
-<div class="checkbox-group">
-    <label><input type="checkbox" name="entry.473673265" value="MS-CIT"> MS-CIT</label>
-    <label><input type="checkbox" name="entry.473673265" value="Tally Prime With GST"> Tally Prime With GST</label>
-    <label><input type="checkbox" name="entry.473673265" value="Artificial intelligence (AI)"> Artificial intelligence (AI)</label>
-    <label><input type="checkbox" name="entry.473673265" value="Advance Excel"> Advance Excel</label>
-    <label><input type="checkbox" name="entry.473673265" value="Other"> Other</label>
+       <label>Branch Enquiry Name *</label>
+<div>
+  <label>
+    <input type="radio" name="entry.1247333280" value="Ekta Nagar, Basmat Road, Parbhani" required>
+    Ekta Nagar, Basmat Road, Parbhani
+  </label>
+</div>
+<div>
+  <label>
+    <input type="radio" name="entry.1247333280" value="Ramkrushna Nagar, Talati Office Behinde Basmat Road, Parbhani">
+    Ramkrushna Nagar, Talati Office Behinde Basmat Road, Parbhani
+  </label>
 </div>
 
+
+        <!-- Candidate First Name -->
+        <label>First Name *</label>
+        <input type="text" name="entry.1559286899" placeholder="Enter your first name" required>
+	
+	  <!-- Candidate Name -->
+        <label>Last Name *</label>
+        <input type="text" name="entry.1983256342" placeholder="Enter your last name" required>
+
+     <!-- Gender -->
+<label>Gender *</label>
+<select name="entry.1486963903" required>
+  <option value="" disabled selected>Select gender...</option>
+  <option value="Male">Male</option>
+  <option value="Female">Female</option>
+</select>
+
+
+        <!-- Qualification -->
+        <label>Qualification *</label>
+<select name="entry.1144115433" required>
+    <option value="" disabled selected>Select qualification...</option>
+    <option>Std 6th to Std 8th</option>
+    <option>Std 9th to Std 10th</option>
+    <option>Std 11th to Std 12th</option>
+    <option>Graduation</option>
+</select>
+        <!-- WhatsApp Mobile No -->
+        <label>WhatsApp Mobile No *</label>
+        <input type="tel" name="entry.994675552" placeholder="Enter WhatsApp number" required>
+
+        <!-- Select Course -->
+        <label>Select Course *</label>
+
+<label>
+  <input type="checkbox" name="entry.1407647077" value="MS-CIT">
+  MS-CIT
+</label>
+
+<label>
+  <input type="checkbox" name="entry.1407647077" value="Tally Prime With GST">
+  Tally Prime With GST
+</label>
+<label>
+  <input type="checkbox" name="entry.1407647077" value="Artificial intelligence - AI">
+  Artificial intelligence (AI)
+</label>
+
+<label>
+  <input type="checkbox" name="entry.1407647077" value="Advance Excel">
+  Advance Excel
+</label>
+
+<label>
+  <input type="checkbox" name="entry.1407647077" value="Other">
+  Other
+</label>
+
+
         <!-- Batch Time -->
-        <label>Batch Time *</label>
-        <div class="radio-group">
-            <label><input type="radio" name="entry.979434290" value="Morning"> Morning</label>
-            <label><input type="radio" name="entry.979434290" value="Afternoon"> Afternoon</label>
-            <label><input type="radio" name="entry.979434290" value="Evening"> Evening</label>
-            <label><input type="radio" name="entry.979434290" value="Night"> Night</label>
-        </div>
+<label>Batch Time *</label>
+<select name="entry.1658862889" required>
+  <option value="" disabled selected>Select batch time...</option>
+  <option value="Morning">Morning</option>
+  <option value="Afternoon">Afternoon</option>
+  <option value="Evening">Evening</option>
+  <option value="Night">Night</option>
+</select>
+
 
         <!-- Source of Enquiry -->
         <label>Source of Enquiry *</label>
-        <select name="entry.1595207663" required>
+        <select name="entry.1498252729" required>
             <option value="" disabled selected>Select source...</option>
             <option>Friends</option>
             <option>Teacher</option>
             <option>Social media</option>
+	    <option>Family Reference</option>
             <option>Other</option>
         </select>
 
-        <!-- Remark -->
-        <label>Remark *</label>
-        <textarea name="entry.1303418978" rows="4" placeholder="Your remarks or feedback"></textarea>
-        
+
+	<!-- Village or City -->
+        <label>Enter the village or city name as per Aadhaar *</label>
+        <input type="tel" name="entry.1089574814" placeholder="Enter village or city name" required>
+
         <button type="submit">Submit</button>
         <div class="small-text">* Required fields</div>
+
     </form>
 </div>
 
 <script>
 document.getElementById("enquiryForm").addEventListener("submit", function(e) {
-    // Handle Google Form's separate year/month/day fields
-    const dateInput = document.getElementById("enquiryDate").value;
-    if (dateInput) {
-        const [year, month, day] = dateInput.split("-");
-        // Create hidden inputs for Google Form
-        const form = e.target;
-        form.querySelectorAll("input[name^='entry.1244397173_']").forEach(i => i.remove());
-        form.insertAdjacentHTML("beforeend",
-            `<input type="hidden" name="entry.1244397173_year" value="${year}">
-             <input type="hidden" name="entry.1244397173_month" value="${month}">
-             <input type="hidden" name="entry.1244397173_day" value="${day}">`
-        );
-    }
+    const dateValue = document.getElementById("enquiryDate").value;
+    if (!dateValue) return; // stop if no date
+
+    const [year, month, day] = dateValue.split("-");
+    const form = e.target;
+
+    // Remove any old hidden inputs
+    form.querySelectorAll("input[name^='entry.1710040844_']").forEach(el => el.remove());
+
+    // Insert year, month, day
+    form.insertAdjacentHTML("beforeend",
+        `<input type="hidden" name="entry.1710040844_year" value="${year}">
+         <input type="hidden" name="entry.1710040844_month" value="${month}">
+         <input type="hidden" name="entry.1710040844_day" value="${day}">`
+    );
+});
+
+/* Auto-populate enquiry date & keep it read-only */
+window.addEventListener("DOMContentLoaded", () => {
+    const today = new Date().toISOString().split("T")[0];
+    document.getElementById("enquiryDate").value = today;
 });
 </script>
 
