@@ -116,10 +116,17 @@
     <option>Std 11th to Std 12th</option>
     <option>Graduation</option>
 </select>
-        <!-- WhatsApp Mobile No -->
         <label>WhatsApp Mobile No *</label>
-        <input type="tel" name="entry.994675552" placeholder="Enter WhatsApp number" required>
-
+<input 
+  type="tel"
+  name="entry.994675552"
+  placeholder="Enter WhatsApp number"
+  required
+  pattern="[0-9]{10}"
+  maxlength="10"
+  inputmode="numeric"
+  title="Please enter exactly 10 digits"
+/>
         <!-- Select Course -->
         <label>Select Course *</label>
 
